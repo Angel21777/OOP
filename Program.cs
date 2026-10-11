@@ -1,34 +1,36 @@
 ﻿using System;
-
-
-namespace Km
+namespace Celsius
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Km/h to m/s converter");
-            Console.WriteLine("Opcii\nkm/h to m/s - 1\nm/s to km/h - 2");
-            Console.Write("Izberete opcija:");
-            int option = int.Parse(Console.ReadLine());
-            switch (option)
+            Console.WriteLine("Celsius - Fahrenheit Converter");
+            Console.WriteLine("Opcii:\nCelsius to Fahrenheit - 1\nFahrenheit to Celsius - 2");
+            Console.Write("Izberete opciq:");
+            int operation = int.Parse(Console.ReadLine());
+            switch (operation)
             {
                 case 1:
-                    Console.Write("Vavedete km/h:");
-                    double kmh = double.Parse(Console.ReadLine());
-                    double ms = kmh / 3.6;
-                    Console.WriteLine($"{kmh} km/h = {ms} m/s");
+                    Console.Write("Vavedete gradusi Celsius:");
+                    double celsius = double.Parse(Console.ReadLine());
+                    double fahrenheit = (celsius * 1.8) + 32;
+                    Console.WriteLine($"{celsius:f}°C = {fahrenheit:f}°F"); 
                     break;
                 case 2:
-                    Console.Write("Vavedete m/s:");
-                    double ms2 = double.Parse(Console.ReadLine());
-                    double kmh2 = ms2 * 3.6;
-                    Console.WriteLine($"{ms2} m/s = {kmh2} km/h");
+                    Console.Write("Vavedete gradusi Fahrenheit:");
+                    double fahrenheit2 = double.Parse(Console.ReadLine());
+                    double celsius2 = (fahrenheit2 - 32) / 1.8;
+                    Console.WriteLine($"{fahrenheit2:f}°F = {celsius2:f}°C");
                     break;
                 default:
                     break;
             }
+
+
+
+
+
         }
     }
 }
-
