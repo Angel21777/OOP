@@ -57,5 +57,25 @@ namespace dopalnitelni_zad2
             Console.WriteLine("Eco:");
             eco = int.Parse(Console.ReadLine());
         }
+        public double KW()
+        {
+            double kwkoef = 0.75;
+            double kwkoeficient = Power * kwkoef;
+            Console.WriteLine($"Kw chasa = {kwkoeficient}");
+            return kwkoeficient;
+        }
+        public double YearKoef()
+        {
+            double yearkoef=0;
+            int curent = 2026;
+            int caryear = curent - Year;
+            if (caryear == 5)//car is 5 years old * 2.3;
+            {
+                yearkoef = caryear * 2.3;
+                Console.WriteLine($"5 godishna kola = {yearkoef}");
+            }
+            return yearkoef;
+            
+        }
     }
 }
